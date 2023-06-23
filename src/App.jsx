@@ -1,11 +1,21 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import { Navbar } from './Components/Navbar'
-
+import 'bootstrap/dist/css/bootstrap.css';
+import {Navbar}  from './Components/Navbar'
+import Footer from './Components/Footer'
+import Poke from './Components/Principal'
 function App() {
   return (
     <>
-    <Navbar />
+    <header>
+        <Navbar />
+    </header>
+
+    <main>
+      <Poke/>
+    </main>
+    <footer>
+        <Footer />
+    </footer>
+    
     </>
   )
 }

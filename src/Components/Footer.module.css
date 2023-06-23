@@ -1,0 +1,88 @@
+/* Footer.module.css */
+
+/* Estilos para el contenedor del footer */
+.sectionFooter {
+  background-color: #eb2f2f;
+  padding: 20px;
+}
+
+/* Estilos para el logotipo */
+.footerLogo {
+  width: 266px;
+  height: 250px;
+  object-fit: contain;
+}
+
+/* Estilos para los enlaces del footer */
+.footerLinks {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footerLink {
+  width: 150px;
+  margin-bottom: 20px;
+}
+
+.footerLinkTitle {
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: bold;
+  color: #fff700;
+}
+
+.footerLinkList {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.footerLinkItem {
+  font-size: 16px;
+  line-height: 24px;
+  color: #ffffff;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.footerLinkItem:hover {
+  color: #007bff;
+}
+
+.footerLinkItemMargin {
+  margin-bottom: 4px;
+}
+
+/* Estilos para el texto de derechos de autor */
+.footerText {
+  font-size: 18px;
+  line-height: 27px;
+  color: #007bff;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Estilos para los íconos de redes sociales */
+.footerSocialIcons {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.footerSocialIcon {
+  width: 21px;
+  height: 21px;
+  object-fit: contain;
+  cursor: pointer;
+  margin-right: 10px;
+  transition: opacity 0.3s ease;
+}
+
+.footerSocialIcon:hover {
+  opacity: 0.8;
+}
+
+.footerSocialIconMargin {
+  margin-right: 6px;
+}

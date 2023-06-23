@@ -16,11 +16,11 @@ export const Navbar = () =>  {
       <NavContainer>
         <img src={imagenes.Logo} width={150} height={80}/>
         <div className={`links ${clicked ? 'active' : ''}`}>
-          <a onClick={handleClick} href="home">Home</a>
-          <a onClick={handleClick} href="QuienesSomos">Quiene Somos</a>
-          <a onClick={handleClick} href="Convenios">Convenios</a>
-          <a onClick={handleClick} href="Tierras">Tierras</a>
-          <a onClick={handleClick} href="Carrito">Carrito</a>
+          <a onClick={handleClick} href="#">Home</a>
+          <a onClick={handleClick} href="#">Perfil</a>
+          <a onClick={handleClick} href="#">Convenios</a>
+          <a onClick={handleClick} href="#">Tierras</a>
+          <a onClick={handleClick} href="#">Carrito</a>
         </div>
         <div className='burguer'>
           <BurguerBuutton clicked={clicked} handleClick={handleClick} />
@@ -32,24 +32,28 @@ export const Navbar = () =>  {
 }
 
 const NavContainer = styled.nav`
-  h2{
+  h2 {
     color: #2ECC71;
     font-weight: 400;
-    span{
+    span {
       font-weight: bold;
     }
   }
   padding: .4rem;
-  background-color: #FDFEFE;
+  background-color: #222;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  a{
-    color: #2ECC71;
+  position: relative; /* Agregado */
+  z-index: 2; /* Agregado */
+  a {
+    color: #FFFF00;
     text-decoration: none;
     margin-right: 3rem;
+    position: relative;
+    z-index: 2; /* Ajustado */
   }
-  .links{
+  .links {
     position: absolute;
     top: -700px;
     left: -2000px;
@@ -58,23 +62,25 @@ const NavContainer = styled.nav`
     margin-right: auto;
     text-align: center;
     transition: all .5s ease;
-    a{
+    a {
       color: #2ECC71;
       font-size: 2rem;
       display: block;
+      position: relative;
+      z-index: 2; /* Ajustado */
     }
-    @media(min-width: 768px){
+    @media (min-width: 768px) {
       position: initial;
       margin: 0;
-      a{
+      a {
         font-size: 1rem;
-        color:#2ECC71;
+        color: #2ECC71;
         display: inline;
       }
       display: block;
     }
   }
-  .links.active{
+  .links.active {
     width: 100%;
     display: block;
     position: absolute;
@@ -84,14 +90,15 @@ const NavContainer = styled.nav`
     left: 0;
     right: 0;
     text-align: center;
-    a{
+    a {
       font-size: 2rem;
       margin-top: 1rem;
       color: white;
     }
+    z-index: 3; 
   }
-  .burguer{
-    @media(min-width: 768px){
+  .burguer {
+    @media (min-width: 768px) {
       display: none;
     }
   }
@@ -104,13 +111,15 @@ const BgDiv = styled.div`
   left: -1000px;
   width: 100%;
   height: 100%;
-  z-index: -1;
-  transition: all .6s ease ;
-  
-  &.active{
+  z-index: 2; 
+  transition: all .6s ease;
+
+  &.active {
     border-radius: 0 0 80% 0;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
-  }`
+    height: 500%;
+    z-index: 1; 
+  }
+`
